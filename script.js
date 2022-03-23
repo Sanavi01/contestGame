@@ -12,7 +12,7 @@ class Questions {
 }
 
 const matPreguntaUno = new Questions ('Matematicas',
-                                    'Cuál es el número anterior a 1000',
+                                    '¿Cuál es el número anterior a 100?',
                                      1,
                                      999,
                                      990,
