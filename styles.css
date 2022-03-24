@@ -13,16 +13,17 @@ header{
     align-items: center;
 }
 
-.box{
+.boxStart{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; 
     align-content: center;
     gap: 15px;
+    
 }
 
-.nombreDeInicio{
+.welcome{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,8 +34,9 @@ header{
     border-style: solid;
     border-color: black;
     border-radius: 10%;
-    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background-image: linear-gradient(to right, #f5f7fa 0%, #A8CABA  51%, #152238 100%);
 }
+
 
 .name{
     padding: 10px;
@@ -42,6 +44,7 @@ header{
 }
 
 .btn-grad {background-image: linear-gradient(to right, #5D4157 0%, #A8CABA  51%, #5D4157  100%)}
+
 .btn-grad {
    margin: 10px;
    padding: 15px 45px;
@@ -53,10 +56,43 @@ header{
    box-shadow: 0 0 20px #eee;
    border-radius: 10px;
    display: block;
- }
+}
 
- .btn-grad:hover {
-   background-position: right center; /* change the direction of the change here */
-   color: #fff;
-   text-decoration: none;
- }
+.category {background-image: linear-gradient(to right, #870000 0%, #190A05  51%, #870000  100%)}
+
+.category2 {background-image: linear-gradient(to right, #1D976C 0%, #93F9B9  51%, #1D976C  100%)}
+
+.category3 {background-image: linear-gradient(to right, #C04848 0%, #480048  51%, #C04848  100%)}
+
+.category5 {background-image: linear-gradient(to right, #FF8008 0%, #FFC837  51%, #FF8008  100%)}
+
+.category4 {background-image: linear-gradient(to right, #2b5876 0%, #4e4376  51%, #2b5876  100%)}
+
+.category, .category2, .category3, .category4, .category5 {
+    width: 300px;
+    height: 100px;
+    margin: 10px;
+    padding: 15px 45px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-grad:hover, .category:hover, .category2:hover, .category3:hover, .category4:hover, .category5:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+    }
+
+.threeCategories, .twoCategories{
+    display: flex;
+    justify-content: space-evenly
+}
+     
+ 
