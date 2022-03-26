@@ -20,7 +20,6 @@ header{
     align-items: center; 
     align-content: center;
     gap: 15px;
-    
 }
 
 .welcome{
@@ -36,7 +35,6 @@ header{
     border-radius: 10%;
     background-image: linear-gradient(to right, #f5f7fa 0%, #A8CABA  51%, #152238 100%);
 }
-
 
 .name{
     padding: 10px;
@@ -94,5 +92,17 @@ header{
     display: flex;
     justify-content: space-evenly
 }
+
      
- 
+.divFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divQuestion{
+    width: 1000px;
+    height: 600px;
+    background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF  51%, #ECE9E6  100%)
+
+}

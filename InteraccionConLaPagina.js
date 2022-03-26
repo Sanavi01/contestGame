@@ -2,7 +2,6 @@ const box = document.querySelector('.box')
 const boxStart = document.querySelector('.boxStart')
 const btnStart = document.querySelector('.btn-grad')
 
-
 function start () {
     btnStart.addEventListener('click', () => {
         box.removeChild(boxStart)
@@ -12,11 +11,11 @@ function start () {
 
 function optionCategories () {
     //Space for the categories
-    const threeCategories =document.createElement('div')
+    const threeCategories = document.createElement('div')
     threeCategories.classList.add('threeCategories')
     box.appendChild(threeCategories)
 
-    const twoCategories =document.createElement('div')
+    const twoCategories = document.createElement('div')
     twoCategories.classList.add('twoCategories')
     box.appendChild(twoCategories)
     //Maths
@@ -44,7 +43,55 @@ function optionCategories () {
     category5.textContent = 'Deportes!'
     category5.classList.add('category5')
     twoCategories.appendChild(category5)
+    selectCategory()
+}
+
+function hideCategories () {
+    const three = document.querySelector('.threeCategories')
+    const two = document.querySelector('.twoCategories')
+    box.removeChild(three)
+    box.removeChild(two)
+}
+
+function cardQuestion () {
+    const divFlex = document.createElement('div')
+    divFlex.classList.add('divFlex')
+    box.appendChild(divFlex)
+
+    const divQuestions = document.createElement('div')
+    divQuestions.classList.add('divQuestion')
+    divFlex.appendChild(divQuestions)
+}
+
+
+
+function selectCategory () {
+    const categoryMath = document.querySelector('.category')
+    const categoryBio = document.querySelector('.category2')
+    const categorySociales= document.querySelector('.category4')
+    const categoryArts = document.querySelector('.category3')
+    const categorySports = document.querySelector('.category5')
+    categoryMath.addEventListener('click' , () => {
+       hideCategories()
+        cardQuestion()
+    })
+    categoryBio.addEventListener('click' , () => {
+        hideCategories()
+        cardQuestion()
+    })
+    categorySociales.addEventListener('click' , () => {
+        hideCategories()
+        cardQuestion()
+    })
+    categoryArts.addEventListener('click' , () => {
+        hideCategories()
+        cardQuestion()
+    })
+    categorySports.addEventListener('click' , () => {
+        hideCategories()
+        cardQuestion()
+    })
+
 }
 
 start()
-

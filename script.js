@@ -6,12 +6,12 @@ class Questions {
         this.correcta = correcta
         this.incorrecta1 = incorrecta1
         this.incorrecta2 = incorrecta2
-        this.incorrecta3 = incorrecta3
+        this.incorrecta3 = incorrecta3    
     }
     
 }
 
-const matPreguntaUno = new Questions ('Matematicas',
+const mathQuestions = new Questions ('Matematicas',
                                     '¿Cuál es el número anterior a 100?',
                                      1,
                                      999,
@@ -19,4 +19,19 @@ const matPreguntaUno = new Questions ('Matematicas',
                                      1001,
                                      900)
 
-console.log(matPreguntaUno)                                  
+
+console.log(mathQuestions)
+
+
+
+/*
+function showQuestion (mathQuestions) {
+    if(mathQuestions.nivel == 1){
+        console.log('Nivel:1 ')
+        
+    }
+}
+
+showQuestion()
+
+*/
