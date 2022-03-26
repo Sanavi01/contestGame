@@ -61,9 +61,18 @@ function cardQuestion () {
     const divQuestions = document.createElement('div')
     divQuestions.classList.add('divQuestion')
     divFlex.appendChild(divQuestions)
+    
+    const difficult = document.createElement('p')
+    difficult.classList.add('difficult')
+    divQuestions.appendChild(difficult)
+    
+    const questionPhrase = document.createElement('h2')
+    questionPhrase.classList.add('questionPhrase')
+    divQuestions.appendChild(questionPhrase)
+
+    randomCorrectPosition () //In script.js we found this function 
+    
 }
-
-
 
 function selectCategory () {
     const categoryMath = document.querySelector('.category')
@@ -72,8 +81,9 @@ function selectCategory () {
     const categoryArts = document.querySelector('.category3')
     const categorySports = document.querySelector('.category5')
     categoryMath.addEventListener('click' , () => {
-       hideCategories()
+        hideCategories()
         cardQuestion()
+
     })
     categoryBio.addEventListener('click' , () => {
         hideCategories()
@@ -93,5 +103,6 @@ function selectCategory () {
     })
 
 }
+
 
 start()

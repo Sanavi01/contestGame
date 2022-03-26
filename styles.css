@@ -101,8 +101,27 @@ header{
 }
 
 .divQuestion{
-    width: 1000px;
-    height: 600px;
-    background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF  51%, #ECE9E6  100%)
+    width: 800px;
+    height: 400px;
+    background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF  51%, #ECE9E6  100%);
+    padding: 20px 80px;
 
 }
+
+.difficult{
+    text-align: right;
+}
+
+.questionPhrase{
+    margin-bottom: 30px;
+}
+
+.correct, .incorrect1, .incorrect2, .incorrect3{
+    gap: 30px;
+    background-color: #A8CABA;
+    padding: 10px;
+    background-image: linear-gradient(to right, #d299c2 0%, #fef9d7 100%);
+    border-style:ridge;
+}
+    
+
