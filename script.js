@@ -1,4 +1,4 @@
-let points = 0 
+let points = 0
 
 //math. bio, arts... = 0 is a close door
 //math. bio, arts... = 1 is a open door    
@@ -20,35 +20,42 @@ let levelSociales = 1
 let levelSports = 1
 
 class Questions {
-    constructor (pregunta, nivel, correcta, incorrecta1, incorrecta2, incorrecta3 ){
+    constructor(pregunta, nivel, correcta, incorrecta1, incorrecta2, incorrecta3) {
         this.pregunta = pregunta
         this.nivel = nivel
         this.correcta = correcta
         this.incorrecta1 = incorrecta1
         this.incorrecta2 = incorrecta2
-        this.incorrecta3 = incorrecta3    
+        this.incorrecta3 = incorrecta3
     }
 }
 
-const questions = new Questions ()
+const questions = new Questions()
 
-function defineQuestion () {
-    if (math == 1){
-        if(levelMath == 1){
+function defineQuestion() {
+    if (math == 1) {
+        if (levelMath == 1) {
             questions.pregunta = '¿Cuanto es dos mas dos?'
             questions.nivel = 'Dificultad 1'
             questions.correcta = 4
             questions.incorrecta1 = 3
             questions.incorrecta2 = 2
             questions.incorrecta3 = 8
-        } 
+        }
         math = 0
-    } else if (bio == 1){
-        console.log("No fue matematicas")
+    } else if (bio == 1) {
+        if (levelBio == 1) {
+            questions.pregunta = '¿Que es la célula?'
+            questions.nivel = 'Dificultad 1'
+            questions.correcta = 'La célula es un tipo de Smartphone'
+            questions.incorrecta1 = 'La célula es el componente básico de todos los seres vivos'
+            questions.incorrecta2 = 'La celula es una parte de solo los humanos'
+            questions.incorrecta3 = 'La celula es algo inherte'
+        }
     }
 }
 
-function showQuestion () {
+function showQuestion() {
     const difficult = document.querySelector('.difficult')
     difficult.textContent = questions.nivel
     const questionPhrase = document.querySelector('.questionPhrase')
@@ -63,26 +70,26 @@ function showQuestion () {
     incorrect3.textContent = questions.incorrecta3
 }
 
-function answer () {
+function answer() {
     const correct = document.querySelector('.correct')
-    correct.addEventListener('click' , () => {
+    correct.addEventListener('click', () => {
         points = points + 1
     })
     const incorrect1 = document.querySelector('.incorrect1')
-    incorrect1.addEventListener('click' , () => {
-        badAnswer ()
+    incorrect1.addEventListener('click', () => {
+        badAnswer()
     })
     const incorrect2 = document.querySelector('.incorrect2')
-    incorrect2.addEventListener('click' , () => {
-        badAnswer ()
+    incorrect2.addEventListener('click', () => {
+        badAnswer()
     })
     const incorrect3 = document.querySelector('.incorrect3')
-    incorrect3.addEventListener('click' , () => {
-        badAnswer ()
+    incorrect3.addEventListener('click', () => {
+        badAnswer()
     })
 }
 
-function badAnswer () {
+function badAnswer() {
     const divFlex = document.querySelector('.divFlex')
     const endGame = document.createElement('div')
     endGame.classList.add('endGame')
@@ -92,7 +99,7 @@ function badAnswer () {
     const buttonReload = document.createElement('div')
     buttonReload.classList.add('buttonReload')
     buttonReload.textContent = "Empecemos de Nuevo!"
-    buttonReload.addEventListener('click' , () => {
+    buttonReload.addEventListener('click', () => {
         window.location.reload()
     })
     endGame.appendChild(buttonReload)
@@ -103,20 +110,20 @@ function badAnswer () {
 
 //LET THE PROGRAM GET A RANDOM POSITION OF THE CORRECT ANSWER
 
-function randomCorrectPosition () {
+function randomCorrectPosition() {
     let random = Math.floor(Math.random() * 4) + 1;
     if (random == 1) {
-        positionOne ()
+        positionOne()
     } else if (random == 2) {
-        positionTwo () 
+        positionTwo()
     } else if (random == 3) {
-        positionThree ()
+        positionThree()
     } else {
-        positionFour ()
+        positionFour()
     }
 }
 
-function positionOne () {
+function positionOne() {
     const divQuestions = document.querySelector('.divQuestion')
 
     const correct = document.createElement('p')
@@ -136,7 +143,7 @@ function positionOne () {
     divQuestions.appendChild(incorrect3)
 }
 
-function positionTwo () {
+function positionTwo() {
     const divQuestions = document.querySelector('.divQuestion')
 
     const incorrect1 = document.createElement('p')
@@ -156,7 +163,7 @@ function positionTwo () {
     divQuestions.appendChild(incorrect3)
 }
 
-function positionThree () {
+function positionThree() {
     const divQuestions = document.querySelector('.divQuestion')
 
     const incorrect1 = document.createElement('p')
@@ -176,9 +183,9 @@ function positionThree () {
     divQuestions.appendChild(incorrect3)
 }
 
-function positionFour () {
+function positionFour() {
     const divQuestions = document.querySelector('.divQuestion')
-    
+
     const incorrect1 = document.createElement('p')
     incorrect1.classList.add('incorrect1')
     divQuestions.appendChild(incorrect1)
