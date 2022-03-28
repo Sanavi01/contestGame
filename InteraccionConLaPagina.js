@@ -51,6 +51,7 @@ function optionCategories () {
     selectCategory()
     showScore()
     doorScore = 1
+    
 }
 
 function hideCategories () {
@@ -58,6 +59,11 @@ function hideCategories () {
     const two = document.querySelector('.twoCategories')
     box.removeChild(three)
     box.removeChild(two)
+}
+
+function hideQuestion () {
+    const divFlex = document.querySelector('.divFlex')
+    box.removeChild(divFlex)
 }
 
 function cardQuestion () {
@@ -90,8 +96,8 @@ function selectCategory () {
     categoryMath.addEventListener('click' , () => {
         math = 1
         hideCategories()
-        cardQuestion()
         defineQuestion () //The function is located in script.js
+        cardQuestion()
         showQuestion ()//The function is located in script.js
         answer()
 
@@ -99,32 +105,32 @@ function selectCategory () {
     categoryBio.addEventListener('click' , () => {
         bio = 1
         hideCategories()
+        defineQuestion () //The function is located in script.js
         cardQuestion()
-        defineQuestion ()//The function is located in script.js
         showQuestion ()//The function is located in script.js
         answer()
     })
     categorySociales.addEventListener('click' , () => {
         sociales = 1
         hideCategories()
+        defineQuestion () //The function is located in script.js
         cardQuestion()
-        defineQuestion ()//The function is located in script.js
         showQuestion ()//The function is located in script.js
         answer()
     })
     categoryArts.addEventListener('click' , () => {
         arts = 1
         hideCategories()
+        defineQuestion () //The function is located in script.js
         cardQuestion()
-        defineQuestion ()//The function is located in script.js
         showQuestion ()//The function is located in script.js
         answer()
     })
     categorySports.addEventListener('click' , () => {
         sports = 1
         hideCategories()
+        defineQuestion () //The function is located in script.js
         cardQuestion()
-        defineQuestion ()//The function is located in script.js
         showQuestion ()//The function is located in script.js
         answer()
     })

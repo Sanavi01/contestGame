@@ -1,6 +1,8 @@
 let points = 0
 
+
 let doorScore = 0
+let doorQuestions = 0
 
 //math. bio, arts... = 0 is a close door
 //math. bio, arts... = 1 is a open door    
@@ -54,6 +56,7 @@ function defineQuestion() {
             questions.incorrecta2 = 'La celula es una parte de solo los humanos'
             questions.incorrecta3 = 'La celula es algo inherte'
         }
+        bio = 0
     } else if (arts == 1) {
         if (levelArts == 1) {
             questions.pregunta = '¿Quien pinto la Capilla Sixtina?'
@@ -63,6 +66,7 @@ function defineQuestion() {
             questions.incorrecta2 = 'Leonardo Da Vinci'
             questions.incorrecta3 = 'William Shakespeare'
         }
+        arts = 0
     } else if (sociales == 1) {
         if (levelSociales == 1) {
             questions.pregunta = '¿Quien descubrio America?'
@@ -72,6 +76,7 @@ function defineQuestion() {
             questions.incorrecta2 = 'El Rey de España'
             questions.incorrecta3 = 'Hernan Cortes'
         }
+        sociales = 0
     } else if (sports == 1){
         if (levelSports == 1) {
             questions.pregunta = '¿Quien es Lionel Messi?'
@@ -81,6 +86,7 @@ function defineQuestion() {
             questions.incorrecta2 = 'Nadador profesional'
             questions.incorrecta3 = 'El Ganador de el Tour de Francia'
         }
+        sports = 0
     }
 }
 
@@ -103,6 +109,9 @@ function answer() {
     const correct = document.querySelector('.correct')
     correct.addEventListener('click', () => {
         points = points + 1
+        doorQuestions = 1
+        hideQuestion ()
+        optionCategories ()
     })
     const incorrect1 = document.querySelector('.incorrect1')
     incorrect1.addEventListener('click', () => {
