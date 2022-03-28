@@ -45,6 +45,43 @@ function defineQuestion() {
             questions.incorrecta1 = 3
             questions.incorrecta2 = 2
             questions.incorrecta3 = 8
+            levelMath = levelMath + 1
+            
+        } else if (levelMath == 2) {
+            questions.pregunta = '¿Si a: 2 , b: 3 , cuando es c, si c : (a * b) + 2?'
+            questions.nivel = 'Dificultad 2'
+            questions.correcta = 8
+            questions.incorrecta1 = 1
+            questions.incorrecta2 = 6
+            questions.incorrecta3 = 4
+            levelMath = levelMath + 1
+
+        } else if (levelMath == 3) {
+            questions.pregunta = 'Si 5 máquinas hacen 5 artículos en 5 minutos. ¿Cuánto tiempo necesitarán 100 máquinas para hacer 100 artículos?'
+            questions.nivel = 'Dificultad 3'
+            questions.correcta = '5 minutos'
+            questions.incorrecta1 = '50 minutos'
+            questions.incorrecta2 = '100 minutos'
+            questions.incorrecta3 = '10 minutos'
+            levelMath = levelMath + 1
+
+        } else if (levelMath == 4) {
+            questions.pregunta = '¿Cual es la raiz cuadrada de 529?'
+            questions.nivel = 'Dificultad 4'
+            questions.correcta = '23'
+            questions.incorrecta1 = '264.5'
+            questions.incorrecta2 = '265'
+            questions.incorrecta3 = '23.5'
+            levelMath = levelMath + 1
+
+        } else if (levelMath == 5) {
+            questions.pregunta = 'Dos ruedas están unidas por una correa de transmisión. La primera tiene un radio de 25 cm y la segunda de 75 cm. Cuando la primera ha dado 300 vueltas. ¿Cuántas vueltas dará la segunda?'
+            questions.nivel = 'Dificultad 5'
+            questions.correcta = '100 vueltas'
+            questions.incorrecta1 = '75 vueltas '
+            questions.incorrecta2 = '25 vueltas'
+            questions.incorrecta3 = '125 vueltas'
+            levelMath = levelMath + 1
         }
         math = 0
     } else if (bio == 1) {
@@ -55,6 +92,7 @@ function defineQuestion() {
             questions.incorrecta1 = 'La célula es un tipo de Smartphone'
             questions.incorrecta2 = 'La celula es una parte de solo los humanos'
             questions.incorrecta3 = 'La celula es algo inherte'
+            levelBio = levelBio + 1
         }
         bio = 0
     } else if (arts == 1) {
@@ -65,6 +103,7 @@ function defineQuestion() {
             questions.incorrecta1 = 'Alejandro Magno'
             questions.incorrecta2 = 'Leonardo Da Vinci'
             questions.incorrecta3 = 'William Shakespeare'
+            levelArts = levelArts + 1
         }
         arts = 0
     } else if (sociales == 1) {
@@ -75,6 +114,7 @@ function defineQuestion() {
             questions.incorrecta1 = 'Francisco de Paula Santander'
             questions.incorrecta2 = 'El Rey de España'
             questions.incorrecta3 = 'Hernan Cortes'
+            levelSociales = levelSociales + 1
         }
         sociales = 0
     } else if (sports == 1){
@@ -85,6 +125,7 @@ function defineQuestion() {
             questions.incorrecta1 = 'Jugador de Basketball'
             questions.incorrecta2 = 'Nadador profesional'
             questions.incorrecta3 = 'El Ganador de el Tour de Francia'
+            levelSports = levelSports + 1
         }
         sports = 0
     }

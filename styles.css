@@ -169,9 +169,10 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: auto;
     height: 50px;
     border-radius: 20px;
     border-style: ridge;
     background-color: whitesmoke;
+    padding: 10px;
 }
