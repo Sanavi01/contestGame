@@ -1,13 +1,4 @@
-class Questions {
-    constructor (pregunta, nivel, correcta, incorrecta1, incorrecta2, incorrecta3 ){
-        this.pregunta = pregunta
-        this.nivel = nivel
-        this.correcta = correcta
-        this.incorrecta1 = incorrecta1
-        this.incorrecta2 = incorrecta2
-        this.incorrecta3 = incorrecta3    
-    }
-}
+let points = 0 
 
 //math. bio, arts... = 0 is a close door
 //math. bio, arts... = 1 is a open door    
@@ -20,7 +11,6 @@ let arts = 0
 let sociales = 0
 let sports = 0
 
-
 //Level allows to show the correct difficult question, this variables will act like an accumulator, if the user answer the questions correct the variable will increase
 
 let levelMath = 1
@@ -29,12 +19,21 @@ let levelArts = 1
 let levelSociales = 1
 let levelSports = 1
 
+class Questions {
+    constructor (pregunta, nivel, correcta, incorrecta1, incorrecta2, incorrecta3 ){
+        this.pregunta = pregunta
+        this.nivel = nivel
+        this.correcta = correcta
+        this.incorrecta1 = incorrecta1
+        this.incorrecta2 = incorrecta2
+        this.incorrecta3 = incorrecta3    
+    }
+}
 
 const questions = new Questions ()
 
-
 function defineQuestion () {
-    if (math = 1){
+    if (math == 1){
         if(levelMath == 1){
             questions.pregunta = '¿Cuanto es dos mas dos?'
             questions.nivel = 'Dificultad 1'
@@ -44,8 +43,9 @@ function defineQuestion () {
             questions.incorrecta3 = 8
         } 
         math = 0
+    } else if (bio == 1){
+        console.log("No fue matematicas")
     }
-    
 }
 
 function showQuestion () {
@@ -62,6 +62,27 @@ function showQuestion () {
     const incorrect3 = document.querySelector('.incorrect3')
     incorrect3.textContent = questions.incorrecta3
 }
+
+function answer () {
+    const correct = document.querySelector('.correct')
+    correct.addEventListener('click' , () => {
+        points = points + 1
+    })
+    const incorrect1 = document.querySelector('.incorrect1')
+    incorrect1.addEventListener('click' , () => {
+        console.log('Has respondido mal!')
+    })
+    const incorrect2 = document.querySelector('.incorrect2')
+    incorrect2.addEventListener('click' , () => {
+        console.log('Has respondido mal!')
+    })
+    const incorrect3 = document.querySelector('.incorrect3')
+    incorrect3.addEventListener('click' , () => {
+        console.log('Has respondido mal!')
+    })
+}
+
+
 
 
 //LET THE PROGRAM GET A RANDOM POSITION OF THE CORRECT ANSWER

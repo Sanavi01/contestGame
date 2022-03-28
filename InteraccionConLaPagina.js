@@ -86,6 +86,7 @@ function selectCategory () {
         cardQuestion()
         defineQuestion () //The function is located in script.js
         showQuestion ()//The function is located in script.js
+        answer()
 
     })
     categoryBio.addEventListener('click' , () => {
@@ -94,6 +95,7 @@ function selectCategory () {
         cardQuestion()
         defineQuestion ()//The function is located in script.js
         showQuestion ()//The function is located in script.js
+        answer()
     })
     categorySociales.addEventListener('click' , () => {
         sociales = 1
@@ -101,6 +103,7 @@ function selectCategory () {
         cardQuestion()
         defineQuestion ()//The function is located in script.js
         showQuestion ()//The function is located in script.js
+        answer()
     })
     categoryArts.addEventListener('click' , () => {
         arts = 1
@@ -108,6 +111,7 @@ function selectCategory () {
         cardQuestion()
         defineQuestion ()//The function is located in script.js
         showQuestion ()//The function is located in script.js
+        answer()
     })
     categorySports.addEventListener('click' , () => {
         sports = 1
@@ -115,6 +119,7 @@ function selectCategory () {
         cardQuestion()
         defineQuestion ()//The function is located in script.js
         showQuestion ()//The function is located in script.js
+        answer()
     })
 
 }
