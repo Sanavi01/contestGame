@@ -157,3 +157,21 @@ header{
     padding: 25px;
     
 }
+
+.divScore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.divCardScore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    border-style: ridge;
+    background-color: whitesmoke;
+}

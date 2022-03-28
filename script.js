@@ -1,5 +1,7 @@
 let points = 0
 
+let doorScore = 0
+
 //math. bio, arts... = 0 is a close door
 //math. bio, arts... = 1 is a open door    
 //This allows to select the correct category to make the question 
@@ -132,6 +134,21 @@ function badAnswer() {
     endGame.appendChild(buttonReload)
 }
 
+function showScore () {
+    if (doorScore == 0){
+        const box = document.querySelector('.box')
+        const divScore = document.createElement('div')
+        divScore.classList.add('divScore')
+        box.appendChild(divScore)
+        const divCardScore = document.createElement('div')
+        divCardScore.classList.add('divCardScore')
+        divCardScore.textContent = `${user} tu puntaje es: ${points}!`
+        divScore.appendChild(divCardScore)
+    } else if (doorScore == 1){
+        const divCardScore = document.querySelector('.divCardScore')
+        divCardScore.textContent = `${user} tu puntaje es: ${points}!`
+    }    
+}
 
 
 

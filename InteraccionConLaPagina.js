@@ -1,9 +1,14 @@
 const box = document.querySelector('.box')
 const boxStart = document.querySelector('.boxStart')
 const btnStart = document.querySelector('.btn-grad')
+const name = document.querySelector('.name')
+
+let user = ""
 
 function start () {
     btnStart.addEventListener('click', () => {
+        const name = document.querySelector('.name').value;
+        user = name
         box.removeChild(boxStart)
         optionCategories();
     })
@@ -44,6 +49,8 @@ function optionCategories () {
     category5.classList.add('category5')
     twoCategories.appendChild(category5)
     selectCategory()
+    showScore()
+    doorScore = 1
 }
 
 function hideCategories () {
