@@ -204,4 +204,3 @@ function positionFour() {
 }
 
 
-console.log('Esto solo se agrega para ver que pasa con el deploy en github')
