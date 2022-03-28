@@ -32,7 +32,7 @@ header{
     border: 2px;
     border-style: solid;
     border-color: black;
-    border-radius: 10%;
+    border-radius: 20px;
     background-image: linear-gradient(to right, #f5f7fa 0%, #A8CABA  51%, #152238 100%);
 }
 
@@ -105,6 +105,7 @@ header{
     height: 400px;
     background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF  51%, #ECE9E6  100%);
     padding: 20px 80px;
+    border-radius: 20px;
 
 }
 
@@ -121,6 +122,7 @@ header{
     padding: 10px;
     background-color: rgb(192, 192, 192);
     border-style:ridge;
+    border-radius: 20px;
 }
 
 .correct:hover, .incorrect1:hover, .incorrect2:hover, .incorrect3:hover{
@@ -128,3 +130,30 @@ header{
     border-width: 5px;
 }
 
+.endGame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    width: 800px;
+    height: 400px;
+    text-align: center;
+    font-size: 30px;
+    background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF  51%, #ECE9E6  100%);
+    border-radius: 20px;
+}
+
+.buttonReload {
+    background-color: #1D976C;
+    border-radius: 20px;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.buttonReload:hover {
+    border-color: rgb(17, 226, 27);
+    border-style: ridge;
+    padding: 25px;
+    
+}

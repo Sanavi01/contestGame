@@ -70,16 +70,32 @@ function answer () {
     })
     const incorrect1 = document.querySelector('.incorrect1')
     incorrect1.addEventListener('click' , () => {
-        console.log('Has respondido mal!')
+        badAnswer ()
     })
     const incorrect2 = document.querySelector('.incorrect2')
     incorrect2.addEventListener('click' , () => {
-        console.log('Has respondido mal!')
+        badAnswer ()
     })
     const incorrect3 = document.querySelector('.incorrect3')
     incorrect3.addEventListener('click' , () => {
-        console.log('Has respondido mal!')
+        badAnswer ()
     })
+}
+
+function badAnswer () {
+    const divFlex = document.querySelector('.divFlex')
+    const endGame = document.createElement('div')
+    endGame.classList.add('endGame')
+    endGame.textContent = 'Respondiste mal, has perdido'
+    divFlex.appendChild(endGame)
+
+    const buttonReload = document.createElement('div')
+    buttonReload.classList.add('buttonReload')
+    buttonReload.textContent = "Empecemos de Nuevo!"
+    buttonReload.addEventListener('click' , () => {
+        window.location.reload()
+    })
+    endGame.appendChild(buttonReload)
 }
 
 
