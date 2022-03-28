@@ -118,10 +118,13 @@ header{
 
 .correct, .incorrect1, .incorrect2, .incorrect3{
     gap: 30px;
-    background-color: #A8CABA;
     padding: 10px;
-    background-image: linear-gradient(to right, #d299c2 0%, #fef9d7 100%);
+    background-color: rgb(192, 192, 192);
     border-style:ridge;
 }
-    
+
+.correct:hover, .incorrect1:hover, .incorrect2:hover, .incorrect3:hover{
+    border-color: #dfa8ff;
+    border-width: 5px;
+}
 

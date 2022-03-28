@@ -7,12 +7,61 @@ class Questions {
         this.incorrecta2 = incorrecta2
         this.incorrecta3 = incorrecta3    
     }
+}
+
+//math. bio, arts... = 0 is a close door
+//math. bio, arts... = 1 is a open door    
+//This allows to select the correct category to make the question 
+//The value of 1 is set in the function SelectCategory in InteraccionConLaPagina.js
+
+let math = 0
+let bio = 0
+let arts = 0
+let sociales = 0
+let sports = 0
+
+
+//Level allows to show the correct difficult question, this variables will act like an accumulator, if the user answer the questions correct the variable will increase
+
+let levelMath = 1
+let levelBio = 1
+let levelArts = 1
+let levelSociales = 1
+let levelSports = 1
+
+
+const questions = new Questions ()
+
+
+function defineQuestion () {
+    if (math = 1){
+        if(levelMath == 1){
+            questions.pregunta = '¿Cuanto es dos mas dos?'
+            questions.nivel = 'Dificultad 1'
+            questions.correcta = 4
+            questions.incorrecta1 = 3
+            questions.incorrecta2 = 2
+            questions.incorrecta3 = 8
+        } 
+        math = 0
+    }
     
 }
 
-let levelMath = 1
-
-const mathQuestions = new Questions ()
+function showQuestion () {
+    const difficult = document.querySelector('.difficult')
+    difficult.textContent = questions.nivel
+    const questionPhrase = document.querySelector('.questionPhrase')
+    questionPhrase.textContent = questions.pregunta
+    const correct = document.querySelector('.correct')
+    correct.textContent = questions.correcta
+    const incorrect1 = document.querySelector('.incorrect1')
+    incorrect1.textContent = questions.incorrecta1
+    const incorrect2 = document.querySelector('.incorrect2')
+    incorrect2.textContent = questions.incorrecta2
+    const incorrect3 = document.querySelector('.incorrect3')
+    incorrect3.textContent = questions.incorrecta3
+}
 
 
 //LET THE PROGRAM GET A RANDOM POSITION OF THE CORRECT ANSWER
@@ -110,20 +159,3 @@ function positionFour () {
     divQuestions.appendChild(correct)
 }
 
-
-
-console.log(mathQuestions)
-
-
-
-/*
-function showQuestion (mathQuestions) {
-    if(mathQuestions.nivel == 1){
-        console.log('Nivel:1 ')
-        
-    }
-}
-
-showQuestion()
-
-*/

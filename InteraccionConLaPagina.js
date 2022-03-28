@@ -70,7 +70,7 @@ function cardQuestion () {
     questionPhrase.classList.add('questionPhrase')
     divQuestions.appendChild(questionPhrase)
 
-    randomCorrectPosition () //In script.js we found this function 
+    randomCorrectPosition () //The function is located in script.js. The function allows put the position of the options randomly
     
 }
 
@@ -81,28 +81,44 @@ function selectCategory () {
     const categoryArts = document.querySelector('.category3')
     const categorySports = document.querySelector('.category5')
     categoryMath.addEventListener('click' , () => {
+        math = 1
         hideCategories()
         cardQuestion()
+        defineQuestion () //The function is located in script.js
+        showQuestion ()//The function is located in script.js
 
     })
     categoryBio.addEventListener('click' , () => {
+        bio = 1
         hideCategories()
         cardQuestion()
+        defineQuestion ()//The function is located in script.js
+        showQuestion ()//The function is located in script.js
     })
     categorySociales.addEventListener('click' , () => {
+        sociales = 1
         hideCategories()
         cardQuestion()
+        defineQuestion ()//The function is located in script.js
+        showQuestion ()//The function is located in script.js
     })
     categoryArts.addEventListener('click' , () => {
+        arts = 1
         hideCategories()
         cardQuestion()
+        defineQuestion ()//The function is located in script.js
+        showQuestion ()//The function is located in script.js
     })
     categorySports.addEventListener('click' , () => {
+        sports = 1
         hideCategories()
         cardQuestion()
+        defineQuestion ()//The function is located in script.js
+        showQuestion ()//The function is located in script.js
     })
 
 }
+
 
 
 start()
