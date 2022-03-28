@@ -47,10 +47,37 @@ function defineQuestion() {
         if (levelBio == 1) {
             questions.pregunta = '¿Que es la célula?'
             questions.nivel = 'Dificultad 1'
-            questions.correcta = 'La célula es un tipo de Smartphone'
-            questions.incorrecta1 = 'La célula es el componente básico de todos los seres vivos'
+            questions.correcta = 'La célula es el componente básico de todos los seres vivos'
+            questions.incorrecta1 = 'La célula es un tipo de Smartphone'
             questions.incorrecta2 = 'La celula es una parte de solo los humanos'
             questions.incorrecta3 = 'La celula es algo inherte'
+        }
+    } else if (arts == 1) {
+        if (levelArts == 1) {
+            questions.pregunta = '¿Quien pinto la Capilla Sixtina?'
+            questions.nivel = 'Dificultad 1'
+            questions.correcta = 'Miguel Angel'
+            questions.incorrecta1 = 'Alejandro Magno'
+            questions.incorrecta2 = 'Leonardo Da Vinci'
+            questions.incorrecta3 = 'William Shakespeare'
+        }
+    } else if (sociales == 1) {
+        if (levelSociales == 1) {
+            questions.pregunta = '¿Quien descubrio America?'
+            questions.nivel = 'Dificultad 1'
+            questions.correcta = 'Cristobal Colon'
+            questions.incorrecta1 = 'Francisco de Paula Santander'
+            questions.incorrecta2 = 'El Rey de España'
+            questions.incorrecta3 = 'Hernan Cortes'
+        }
+    } else if (sports == 1){
+        if (levelSports == 1) {
+            questions.pregunta = '¿Quien es Lionel Messi?'
+            questions.nivel = 'Dificultad 1'
+            questions.correcta = 'Jugador de Futbol'
+            questions.incorrecta1 = 'Jugador de Basketball'
+            questions.incorrecta2 = 'Nadador profesional'
+            questions.incorrecta3 = 'El Ganador de el Tour de Francia'
         }
     }
 }
