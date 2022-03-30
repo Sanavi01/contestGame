@@ -5,16 +5,16 @@ const name = document.querySelector('.name')
 
 let user = ""
 
-function start () {
+function start() {
     btnStart.addEventListener('click', () => {
         const name = document.querySelector('.name').value;
         user = name
         box.removeChild(boxStart)
         optionCategories();
     })
-}   
+}
 
-function optionCategories () {
+function optionCategories() {
     //Space for the categories
     const threeCategories = document.createElement('div')
     threeCategories.classList.add('threeCategories')
@@ -51,22 +51,22 @@ function optionCategories () {
     selectCategory()
     showScore()
     doorScore = 1
-    
+
 }
 
-function hideCategories () {
+function hideCategories() {
     const three = document.querySelector('.threeCategories')
     const two = document.querySelector('.twoCategories')
     box.removeChild(three)
     box.removeChild(two)
 }
 
-function hideQuestion () {
+function hideQuestion() {
     const divFlex = document.querySelector('.divFlex')
     box.removeChild(divFlex)
 }
 
-function cardQuestion () {
+function cardQuestion() {
     const divFlex = document.createElement('div')
     divFlex.classList.add('divFlex')
     box.appendChild(divFlex)
@@ -74,64 +74,64 @@ function cardQuestion () {
     const divQuestions = document.createElement('div')
     divQuestions.classList.add('divQuestion')
     divFlex.appendChild(divQuestions)
-    
+
     const difficult = document.createElement('p')
     difficult.classList.add('difficult')
     divQuestions.appendChild(difficult)
-    
+
     const questionPhrase = document.createElement('h2')
     questionPhrase.classList.add('questionPhrase')
     divQuestions.appendChild(questionPhrase)
 
-    randomCorrectPosition () //The function is located in script.js. The function allows put the position of the options randomly
-    
+    randomCorrectPosition() //The function is located in script.js. The function allows put the position of the options randomly
+
 }
 
-function selectCategory () {
+function selectCategory() {
     const categoryMath = document.querySelector('.category')
     const categoryBio = document.querySelector('.category2')
-    const categorySociales= document.querySelector('.category4')
+    const categorySociales = document.querySelector('.category4')
     const categoryArts = document.querySelector('.category3')
     const categorySports = document.querySelector('.category5')
-    categoryMath.addEventListener('click' , () => {
+    categoryMath.addEventListener('click', () => {
         math = 1
         hideCategories()
-        defineQuestion () //The function is located in script.js
+        defineQuestion() //The function is located in script.js
         cardQuestion()
-        showQuestion ()//The function is located in script.js
+        showQuestion()//The function is located in script.js
         answer()
 
     })
-    categoryBio.addEventListener('click' , () => {
+    categoryBio.addEventListener('click', () => {
         bio = 1
         hideCategories()
-        defineQuestion () //The function is located in script.js
+        defineQuestion() //The function is located in script.js
         cardQuestion()
-        showQuestion ()//The function is located in script.js
+        showQuestion()//The function is located in script.js
         answer()
     })
-    categorySociales.addEventListener('click' , () => {
+    categorySociales.addEventListener('click', () => {
         sociales = 1
         hideCategories()
-        defineQuestion () //The function is located in script.js
+        defineQuestion() //The function is located in script.js
         cardQuestion()
-        showQuestion ()//The function is located in script.js
+        showQuestion()//The function is located in script.js
         answer()
     })
-    categoryArts.addEventListener('click' , () => {
+    categoryArts.addEventListener('click', () => {
         arts = 1
         hideCategories()
-        defineQuestion () //The function is located in script.js
+        defineQuestion() //The function is located in script.js
         cardQuestion()
-        showQuestion ()//The function is located in script.js
+        showQuestion()//The function is located in script.js
         answer()
     })
-    categorySports.addEventListener('click' , () => {
+    categorySports.addEventListener('click', () => {
         sports = 1
         hideCategories()
-        defineQuestion () //The function is located in script.js
+        defineQuestion() //The function is located in script.js
         cardQuestion()
-        showQuestion ()//The function is located in script.js
+        showQuestion()//The function is located in script.js
         answer()
     })
 

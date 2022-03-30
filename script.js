@@ -129,6 +129,7 @@ function defineQuestion() {
         }
         sports = 0
     }
+    
 }
 
 function showQuestion() {
@@ -150,7 +151,6 @@ function answer() {
     const correct = document.querySelector('.correct')
     correct.addEventListener('click', () => {
         points = points + 1
-        doorQuestions = 1
         hideQuestion ()
         optionCategories ()
     })
@@ -229,7 +229,7 @@ function positionOne() {
     divQuestions.appendChild(incorrect1)
 
     const incorrect2 = document.createElement('p')
-    incorrect2.classList.add('incorrect')
+    incorrect2.classList.add('incorrect2')
     divQuestions.appendChild(incorrect2)
 
     const incorrect3 = document.createElement('p')
