@@ -47,7 +47,7 @@ function defineQuestion() {
             questions.incorrecta3 = 8
             levelMath = levelMath + 1
             points = points + 1
-            
+
         } else if (levelMath == 2) {
             questions.pregunta = '¿Si a: 2 , b: 3 , cuando es c, si c : (a * b) + 2?'
             questions.nivel = 'Dificultad 2'
@@ -99,7 +99,48 @@ function defineQuestion() {
             questions.incorrecta3 = 'La celula es algo inherte'
             levelBio = levelBio + 1
             points = points + 1
-        }
+
+        } else if (levelBio == 2) {
+            questions.pregunta = 'Las células reproductoras se dividen por...'
+            questions.nivel = 'Dificultad 2'
+            questions.correcta = 'Meiosis'
+            questions.incorrecta1 = 'Metamorfosis'
+            questions.incorrecta2 = 'Mitosis'
+            questions.incorrecta3 = 'Miogenesis'
+            levelBio = levelBio + 1
+            points = points + 2
+
+        } else if (levelBio == 3) {
+            questions.pregunta = '¿Qué explica Mendel con sus leyes?'
+            questions.nivel = 'Dificultad 3'
+            questions.correcta = 'Genetica'
+            questions.incorrecta1 = 'Funcionamiento de órganos reproductores.'
+            questions.incorrecta2 = 'La herencia dejada por los padres a los hijos. '
+            questions.incorrecta3 = 'El proceso de pasteurizacion'
+            levelBio = levelBio + 1
+            points = points + 3
+
+        } else if (levelBio == 4) {
+            questions.pregunta = 'Los organismos autótrofos tienen como característica:'
+            questions.nivel = 'Dificultad 4'
+            questions.correcta = 'Elabora sus propios alimentos'
+            questions.incorrecta1 = 'Su dieta es de plantas'
+            questions.incorrecta2 = 'No sintetiza sus alimentos '
+            questions.incorrecta3 = 'Consume alimentos elaborados'
+            levelBio = levelBio + 1
+            points = points + 4
+            
+        } else if (levelBio == 5) {
+            questions.pregunta = 'La unidad estructural básica repetitiva de la cromatina de los cromosomas eucarióticos es:'
+            questions.nivel = 'Dificultad 5'
+            questions.correcta = 'El nucleosoma'
+            questions.incorrecta1 = 'El genoma'
+            questions.incorrecta2 = 'El centrosoma'
+            questions.incorrecta3 = 'El proteosoma'
+            levelBio = levelBio + 1
+            points = points + 5
+            
+        } 
         bio = 0
     } else if (arts == 1) {
         if (levelArts == 1) {
@@ -125,7 +166,7 @@ function defineQuestion() {
             points = points + 1
         }
         sociales = 0
-    } else if (sports == 1){
+    } else if (sports == 1) {
         if (levelSports == 1) {
             questions.pregunta = '¿Quien es Lionel Messi?'
             questions.nivel = 'Dificultad 1'
@@ -138,7 +179,7 @@ function defineQuestion() {
         }
         sports = 0
     }
-    
+
 }
 
 function showQuestion() {
@@ -159,9 +200,9 @@ function showQuestion() {
 function answer() {
     const correct = document.querySelector('.correct')
     correct.addEventListener('click', () => {
-       
-        hideQuestion ()
-        optionCategories ()
+
+        hideQuestion()
+        optionCategories()
     })
     const incorrect1 = document.querySelector('.incorrect1')
     incorrect1.addEventListener('click', () => {
@@ -193,8 +234,8 @@ function badAnswer() {
     endGame.appendChild(buttonReload)
 }
 
-function showScore () {
-    if (doorScore == 0){
+function showScore() {
+    if (doorScore == 0) {
         const box = document.querySelector('.box')
         const divScore = document.createElement('div')
         divScore.classList.add('divScore')
@@ -203,10 +244,10 @@ function showScore () {
         divCardScore.classList.add('divCardScore')
         divCardScore.textContent = `${user} tu puntaje es: ${points}!`
         divScore.appendChild(divCardScore)
-    } else if (doorScore == 1){
+    } else if (doorScore == 1) {
         const divCardScore = document.querySelector('.divCardScore')
         divCardScore.textContent = `${user} tu puntaje es: ${points}!`
-    }    
+    }
 }
 
 
