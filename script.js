@@ -17,11 +17,11 @@ let sports = 0
 
 //Level allows to show the correct difficult question, this variables will act like an accumulator, if the user answer the questions correct the variable will increase
 
-let levelMath = 1
-let levelBio = 1
-let levelArts = 1
-let levelSociales = 1
-let levelSports = 1
+let levelMath = 0
+let levelBio = 0
+let levelArts = 0
+let levelSociales = 0
+let levelSports = 0
 
 class Questions {
     constructor(pregunta, nivel, correcta, incorrecta1, incorrecta2, incorrecta3) {
@@ -38,7 +38,7 @@ const questions = new Questions()
 
 function defineQuestion() {
     if (math == 1) {
-        if (levelMath == 1) {
+        if (levelMath == 0) {
             questions.pregunta = '¿Cuanto es dos mas dos?'
             questions.nivel = 'Dificultad 1'
             questions.correcta = 4
@@ -48,7 +48,7 @@ function defineQuestion() {
             levelMath = levelMath + 1
             points = points + 1
 
-        } else if (levelMath == 2) {
+        } else if (levelMath == 1) {
             questions.pregunta = '¿Si a: 2 , b: 3 , cuando es c, si c : (a * b) + 2?'
             questions.nivel = 'Dificultad 2'
             questions.correcta = 8
@@ -58,7 +58,7 @@ function defineQuestion() {
             levelMath = levelMath + 1
             points = points + 2
 
-        } else if (levelMath == 3) {
+        } else if (levelMath == 2) {
             questions.pregunta = 'Si 5 máquinas hacen 5 artículos en 5 minutos. ¿Cuánto tiempo necesitarán 100 máquinas para hacer 100 artículos?'
             questions.nivel = 'Dificultad 3'
             questions.correcta = '5 minutos'
@@ -68,7 +68,7 @@ function defineQuestion() {
             levelMath = levelMath + 1
             points = points + 3
 
-        } else if (levelMath == 4) {
+        } else if (levelMath == 3) {
             questions.pregunta = '¿Cual es la raiz cuadrada de 529?'
             questions.nivel = 'Dificultad 4'
             questions.correcta = '23'
@@ -78,7 +78,7 @@ function defineQuestion() {
             levelMath = levelMath + 1
             points = points + 4
 
-        } else if (levelMath == 5) {
+        } else if (levelMath == 4) {
             questions.pregunta = 'Dos ruedas están unidas por una correa de transmisión. La primera tiene un radio de 25 cm y la segunda de 75 cm. Cuando la primera ha dado 300 vueltas. ¿Cuántas vueltas dará la segunda?'
             questions.nivel = 'Dificultad 5'
             questions.correcta = '100 vueltas'
@@ -90,7 +90,7 @@ function defineQuestion() {
         }
         math = 0
     } else if (bio == 1) {
-        if (levelBio == 1) {
+        if (levelBio == 0) {
             questions.pregunta = '¿Que es la célula?'
             questions.nivel = 'Dificultad 1'
             questions.correcta = 'La célula es el componente básico de todos los seres vivos'
@@ -100,7 +100,7 @@ function defineQuestion() {
             levelBio = levelBio + 1
             points = points + 1
 
-        } else if (levelBio == 2) {
+        } else if (levelBio == 1) {
             questions.pregunta = 'Las células reproductoras se dividen por...'
             questions.nivel = 'Dificultad 2'
             questions.correcta = 'Meiosis'
@@ -110,7 +110,7 @@ function defineQuestion() {
             levelBio = levelBio + 1
             points = points + 2
 
-        } else if (levelBio == 3) {
+        } else if (levelBio == 2) {
             questions.pregunta = '¿Qué explica Mendel con sus leyes?'
             questions.nivel = 'Dificultad 3'
             questions.correcta = 'Genetica'
@@ -120,7 +120,7 @@ function defineQuestion() {
             levelBio = levelBio + 1
             points = points + 3
 
-        } else if (levelBio == 4) {
+        } else if (levelBio == 3) {
             questions.pregunta = 'Los organismos autótrofos tienen como característica:'
             questions.nivel = 'Dificultad 4'
             questions.correcta = 'Elabora sus propios alimentos'
@@ -130,7 +130,7 @@ function defineQuestion() {
             levelBio = levelBio + 1
             points = points + 4
             
-        } else if (levelBio == 5) {
+        } else if (levelBio == 4) {
             questions.pregunta = 'La unidad estructural básica repetitiva de la cromatina de los cromosomas eucarióticos es:'
             questions.nivel = 'Dificultad 5'
             questions.correcta = 'El nucleosoma'
@@ -143,7 +143,7 @@ function defineQuestion() {
         } 
         bio = 0
     } else if (arts == 1) {
-        if (levelArts == 1) {
+        if (levelArts == 0) {
             questions.pregunta = '¿Quien pinto la Capilla Sixtina?'
             questions.nivel = 'Dificultad 1'
             questions.correcta = 'Miguel Angel'
@@ -152,6 +152,47 @@ function defineQuestion() {
             questions.incorrecta3 = 'William Shakespeare'
             levelArts = levelArts + 1
             points = points + 1
+
+        } else if (levelArts == 1){
+            questions.pregunta = '¿En que premios "Oscar" Will Smith golpeo  Chris Rock?'
+            questions.nivel = 'Dificultad 2'
+            questions.correcta = '2022'
+            questions.incorrecta1 = '2021'
+            questions.incorrecta2 = '2020'
+            questions.incorrecta3 = 'Nunca paso'
+            levelArts = levelArts + 1
+            points = points + 2
+
+        } else if (levelArts == 2){
+            questions.pregunta = '¿Quien escribio la Divina Comedia?'
+            questions.nivel = 'Dificultad 3'
+            questions.correcta = 'Dante Alighieri'
+            questions.incorrecta1 = 'Nicolas Maquiavelo'
+            questions.incorrecta2 = 'Miguel de Cervantes'
+            questions.incorrecta3 = 'Francisco de Quevedo'
+            levelArts = levelArts + 1
+            points = points + 3
+
+        } else if (levelArts == 3){
+            questions.pregunta = '¿Quien pinto la Mona Lisa?'
+            questions.nivel = 'Dificultad 4'
+            questions.correcta = 'Leonardo Da Vinci'
+            questions.incorrecta1 = 'Pablo Picasso'
+            questions.incorrecta2 = 'Salvador Dali'
+            questions.incorrecta3 = 'Vincent Van Gogh'
+            levelArts = levelArts + 1
+            points = points + 4
+
+        } else if (levelArts == 4){
+            questions.pregunta = '¿Cual fue la cancion mas importante de The Beatles?'
+            questions.nivel = 'Dificultad 5'
+            questions.correcta = 'Yesterday'
+            questions.incorrecta1 = 'Let it Be'
+            questions.incorrecta2 = 'Hey Jude'
+            questions.incorrecta3 = 'Oh! Darling'
+            levelArts = levelArts + 1
+            points = points + 5
+
         }
         arts = 0
     } else if (sociales == 1) {
