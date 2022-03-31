@@ -49,7 +49,7 @@ function defineQuestion() {
             points = points + 1
 
         } else if (levelMath == 1) {
-            questions.pregunta = '¿Si a: 2 , b: 3 , cuando es c, si c : (a * b) + 2?'
+            questions.pregunta = '¿Si a: 2 , b: 3 , cuanto es c, si c : (a * b) + 2?'
             questions.nivel = 'Dificultad 2'
             questions.correcta = 8
             questions.incorrecta1 = 1
@@ -196,7 +196,7 @@ function defineQuestion() {
         }
         arts = 0
     } else if (sociales == 1) {
-        if (levelSociales == 1) {
+        if (levelSociales == 0) {
             questions.pregunta = '¿Quien descubrio America?'
             questions.nivel = 'Dificultad 1'
             questions.correcta = 'Cristobal Colon'
@@ -205,10 +205,50 @@ function defineQuestion() {
             questions.incorrecta3 = 'Hernan Cortes'
             levelSociales = levelSociales + 1
             points = points + 1
+        } else if (levelSociales == 1) {
+            questions.pregunta = '¿En qué país se inició la Revolución Industrial?'
+            questions.nivel = 'Dificultad 2'
+            questions.correcta = 'Inglaterra'
+            questions.incorrecta1 = 'Italia'
+            questions.incorrecta2 = 'España'
+            questions.incorrecta3 = 'Francia'
+            levelSociales = levelSociales + 1
+            points = points + 2
+
+        } else if (levelSociales == 2) {
+            questions.pregunta = '¿Qué famosa batalla perdió y dejó humillado a Napoleón Bonaparte?'
+            questions.nivel = 'Dificultad 3'
+            questions.correcta = 'Batalla de Waterloo'
+            questions.incorrecta1 = 'Batalla de Austerlitz'
+            questions.incorrecta2 = 'La campaña de Trafalgar.'
+            questions.incorrecta3 = 'La batalla de Borodino'
+            levelSociales = levelSociales + 1
+            points = points + 3
+            
+        } else if (levelSociales == 3) {
+            questions.pregunta = '¿Qué inició la Segunda Guerra Mundial?'
+            questions.nivel = 'Dificultad 4'
+            questions.correcta = 'Alemania invadió Polonia'
+            questions.incorrecta1 = 'El asesinato del archiduque Francisco Fernando.'
+            questions.incorrecta2 = 'Hitler invadió Austria'
+            questions.incorrecta3 = 'La caida del muro de Berlin'
+            levelSociales = levelSociales + 1
+            points = points + 4
+            
+        } else if (levelSociales == 4) {
+            questions.pregunta = '¿Qué emperador romano legalizó el cristianismo y puso fin a la persecución de los cristianos?'
+            questions.nivel = 'Dificultad 5'
+            questions.correcta = 'Constantino'
+            questions.incorrecta1 = 'Adriano.'
+            questions.incorrecta2 = 'Trajano'
+            questions.incorrecta3 = 'Neron'
+            levelSociales = levelSociales + 1
+            points = points + 5
+            
         }
         sociales = 0
     } else if (sports == 1) {
-        if (levelSports == 1) {
+        if (levelSports == 0) {
             questions.pregunta = '¿Quien es Lionel Messi?'
             questions.nivel = 'Dificultad 1'
             questions.correcta = 'Jugador de Futbol'
@@ -217,6 +257,47 @@ function defineQuestion() {
             questions.incorrecta3 = 'El Ganador de el Tour de Francia'
             levelSports = levelSports + 1
             points = points + 1
+
+        } else if (levelSports == 1) {
+            questions.pregunta = '¿Quién tiene más goles en el fútbol?'
+            questions.nivel = 'Dificultad 2'
+            questions.correcta = 'Cristiano Ronaldo'
+            questions.incorrecta1 = 'Ronaldinho'
+            questions.incorrecta2 = 'Zlatan Ibrahimovic'
+            questions.incorrecta3 = 'Lionel Messi'
+            levelSports = levelSports + 1
+            points = points + 2
+            
+        } else if (levelSports == 2) {
+            questions.pregunta = '¿Cuál es el significado de NBA?'
+            questions.nivel = 'Dificultad 3'
+            questions.correcta = 'Asociación Nacional de Basquetbol'
+            questions.incorrecta1 = 'Administración Nacional de Baloncesto'
+            questions.incorrecta2 = 'Administración Nacional de Canasta'
+            questions.incorrecta3 = 'Asociación Nacional de Canasta'
+            levelSports = levelSports + 1
+            points = points + 3
+            
+        } else if (levelSports == 3) {
+            questions.pregunta = '¿Manny Pacquiao es un boxeador legendario de qué país?'
+            questions.nivel = 'Dificultad 4'
+            questions.correcta = 'Filipinas'
+            questions.incorrecta1 = 'Corea'
+            questions.incorrecta2 = 'China'
+            questions.incorrecta3 = 'Mexico'
+            levelSports = levelSports + 1
+            points = points + 4
+            
+        } else if (levelSports == 4) {
+            questions.pregunta = '¿Cuáles son los cinco colores del anillo de los Juegos Olímpicos?'
+            questions.nivel = 'Dificultad 5'
+            questions.correcta = 'Azul, rojo, amarillo, verde y negro'
+            questions.incorrecta1 = 'Azul, rojo, amarillo, verde y violeta'
+            questions.incorrecta2 = 'índigo, rojo, morado, verde y negro'
+            questions.incorrecta3 = 'Azul, rojo, amarillo, naranja y verde'
+            levelSports = levelSports + 1
+            points = points + 5
+            
         }
         sports = 0
     }
