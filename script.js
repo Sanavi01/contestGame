@@ -309,32 +309,32 @@ function showQuestion() {
     difficult.textContent = questions.nivel
     const questionPhrase = document.querySelector('.questionPhrase')
     questionPhrase.textContent = questions.pregunta
-    const correct = document.querySelector('.correct')
+    const correct = document.querySelector('.answerA')
     correct.textContent = questions.correcta
-    const incorrect1 = document.querySelector('.incorrect1')
+    const incorrect1 = document.querySelector('.answerB')
     incorrect1.textContent = questions.incorrecta1
-    const incorrect2 = document.querySelector('.incorrect2')
+    const incorrect2 = document.querySelector('.answerC')
     incorrect2.textContent = questions.incorrecta2
-    const incorrect3 = document.querySelector('.incorrect3')
+    const incorrect3 = document.querySelector('.answerD')
     incorrect3.textContent = questions.incorrecta3
 }
 
 function answer() {
-    const correct = document.querySelector('.correct')
+    const correct = document.querySelector('.answerA')
     correct.addEventListener('click', () => {
 
         hideQuestion()
         optionCategories()
     })
-    const incorrect1 = document.querySelector('.incorrect1')
+    const incorrect1 = document.querySelector('.answerB')
     incorrect1.addEventListener('click', () => {
         badAnswer()
     })
-    const incorrect2 = document.querySelector('.incorrect2')
+    const incorrect2 = document.querySelector('.answerC')
     incorrect2.addEventListener('click', () => {
         badAnswer()
     })
-    const incorrect3 = document.querySelector('.incorrect3')
+    const incorrect3 = document.querySelector('.answerD')
     incorrect3.addEventListener('click', () => {
         badAnswer()
     })
@@ -393,19 +393,19 @@ function positionOne() {
     const divQuestions = document.querySelector('.divQuestion')
 
     const correct = document.createElement('p')
-    correct.classList.add('correct')
+    correct.classList.add('answerA')
     divQuestions.appendChild(correct)
 
     const incorrect1 = document.createElement('p')
-    incorrect1.classList.add('incorrect1')
+    incorrect1.classList.add('answerB')
     divQuestions.appendChild(incorrect1)
 
     const incorrect2 = document.createElement('p')
-    incorrect2.classList.add('incorrect2')
+    incorrect2.classList.add('answerC')
     divQuestions.appendChild(incorrect2)
 
     const incorrect3 = document.createElement('p')
-    incorrect3.classList.add('incorrect3')
+    incorrect3.classList.add('answerD')
     divQuestions.appendChild(incorrect3)
 }
 
@@ -413,19 +413,19 @@ function positionTwo() {
     const divQuestions = document.querySelector('.divQuestion')
 
     const incorrect1 = document.createElement('p')
-    incorrect1.classList.add('incorrect1')
+    incorrect1.classList.add('answerB')
     divQuestions.appendChild(incorrect1)
 
     const correct = document.createElement('p')
-    correct.classList.add('correct')
+    correct.classList.add('answerA')
     divQuestions.appendChild(correct)
 
     const incorrect2 = document.createElement('p')
-    incorrect2.classList.add('incorrect2')
+    incorrect2.classList.add('answerC')
     divQuestions.appendChild(incorrect2)
 
     const incorrect3 = document.createElement('p')
-    incorrect3.classList.add('incorrect3')
+    incorrect3.classList.add('answerD')
     divQuestions.appendChild(incorrect3)
 }
 
@@ -433,19 +433,19 @@ function positionThree() {
     const divQuestions = document.querySelector('.divQuestion')
 
     const incorrect1 = document.createElement('p')
-    incorrect1.classList.add('incorrect1')
+    incorrect1.classList.add('answerB')
     divQuestions.appendChild(incorrect1)
 
     const incorrect2 = document.createElement('p')
-    incorrect2.classList.add('incorrect2')
+    incorrect2.classList.add('answerC')
     divQuestions.appendChild(incorrect2)
 
     const correct = document.createElement('p')
-    correct.classList.add('correct')
+    correct.classList.add('answerA')
     divQuestions.appendChild(correct)
 
     const incorrect3 = document.createElement('p')
-    incorrect3.classList.add('incorrect3')
+    incorrect3.classList.add('answerD')
     divQuestions.appendChild(incorrect3)
 }
 
@@ -453,19 +453,19 @@ function positionFour() {
     const divQuestions = document.querySelector('.divQuestion')
 
     const incorrect1 = document.createElement('p')
-    incorrect1.classList.add('incorrect1')
+    incorrect1.classList.add('answerB')
     divQuestions.appendChild(incorrect1)
 
     const incorrect2 = document.createElement('p')
-    incorrect2.classList.add('incorrect2')
+    incorrect2.classList.add('answerC')
     divQuestions.appendChild(incorrect2)
 
     const incorrect3 = document.createElement('p')
-    incorrect3.classList.add('incorrect3')
+    incorrect3.classList.add('answerD')
     divQuestions.appendChild(incorrect3)
 
     const correct = document.createElement('p')
-    correct.classList.add('correct')
+    correct.classList.add('answerA')
     divQuestions.appendChild(correct)
 }
 

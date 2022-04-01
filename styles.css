@@ -117,7 +117,7 @@ header{
     margin-bottom: 30px;
 }
 
-.correct, .incorrect1, .incorrect2, .incorrect3{
+.answerA, .answerB, .answerC, .answerD{
     gap: 30px;
     padding: 10px;
     background-color: rgb(192, 192, 192);
