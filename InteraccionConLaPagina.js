@@ -5,12 +5,39 @@ const name = document.querySelector('.name')
 
 let user = ""
 
+function modes () {
+    //MODES DIV
+    const modesDiv = document.createElement('div')
+    modesDiv.classList.add('modesDiv')
+    const modes = document.createElement('div')
+    modes.classList.add('modes')
+    box.appendChild(modesDiv)
+    modesDiv.appendChild(modes)
+    const modePhrase = document.createElement('p')
+    modePhrase.textContent = '¿Que modo deseas elegir?'
+    modes.appendChild(modePhrase)
+
+    //BUTTONS
+    const buttonsModeDiv = document.createElement('div')
+    buttonsModeDiv.classList.add('buttonsMode')
+    modes.appendChild(buttonsModeDiv)
+    const userSelectQuestions = document.createElement('div')
+    userSelectQuestions.classList.add('userSelect')
+    userSelectQuestions.textContent = '¡Tu Eliges La Categoria Que Quieras!'
+    buttonsModeDiv.appendChild(userSelectQuestions)
+    const randomQuestions = document.createElement('div')
+    randomQuestions.classList.add('userSelect')
+    randomQuestions.textContent = '¡Probemos preguntas al azar!'
+    buttonsModeDiv.appendChild(randomQuestions)
+}
+
+
 function start() {
     btnStart.addEventListener('click', () => {
         const name = document.querySelector('.name').value;
         user = name
         box.removeChild(boxStart)
-        optionCategories();
+        modes()
     })
 }
 

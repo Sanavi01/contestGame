@@ -176,3 +176,41 @@ header{
     background-color: whitesmoke;
     padding: 10px;
 }
+
+.modesDiv {
+    display: flex;
+    justify-content: center;
+}
+
+.modes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF  51%, #ECE9E6  100%);
+    width: 600px;
+    height: 200px;
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.buttonsMode {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.userSelect {
+    font-size: 15px;
+    width: 100px;
+    padding: 15px;
+    text-align: center;
+    background-color: gainsboro;
+    border-radius: 10px;
+}
+
+.userSelect:hover {
+    font-size: 16px;
+    border: solid black
+}
