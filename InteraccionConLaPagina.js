@@ -16,7 +16,6 @@ function modes () {
     const modePhrase = document.createElement('p')
     modePhrase.textContent = '¿Que modo deseas elegir?'
     modes.appendChild(modePhrase)
-
     //BUTTONS
     const buttonsModeDiv = document.createElement('div')
     buttonsModeDiv.classList.add('buttonsMode')
@@ -29,6 +28,17 @@ function modes () {
     randomQuestions.classList.add('userSelect')
     randomQuestions.textContent = '¡Probemos preguntas al azar!'
     buttonsModeDiv.appendChild(randomQuestions)
+    //CALL FUNCTION
+    selectMode()
+}
+
+function selectMode () {
+    const userSelectQuestions = document.querySelector('.userSelect')
+    const modesDiv = document.querySelector('.modesDiv')
+    userSelectQuestions.addEventListener('click', () => {
+       box.removeChild(modesDiv)
+        optionCategories ()
+    })
 }
 
 
