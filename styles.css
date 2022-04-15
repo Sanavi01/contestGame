@@ -201,7 +201,7 @@ header{
     gap: 30px;
 }
 
-.userSelect {
+.userSelect, .userSelectII {
     font-size: 15px;
     width: 100px;
     padding: 15px;
@@ -210,7 +210,7 @@ header{
     border-radius: 10px;
 }
 
-.userSelect:hover {
+.userSelect:hover, .userSelectII:hover {
     font-size: 16px;
     border: solid black
 }

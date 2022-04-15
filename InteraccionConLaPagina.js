@@ -5,7 +5,16 @@ const name = document.querySelector('.name')
 
 let user = ""
 
-function modes () {
+function start() {
+    btnStart.addEventListener('click', () => {
+        const name = document.querySelector('.name').value;
+        user = name
+        box.removeChild(boxStart)
+        modes()
+    })
+}
+
+function modes() {
     //MODES DIV
     const modesDiv = document.createElement('div')
     modesDiv.classList.add('modesDiv')
@@ -25,31 +34,27 @@ function modes () {
     userSelectQuestions.textContent = '¡Tu Eliges La Categoria Que Quieras!'
     buttonsModeDiv.appendChild(userSelectQuestions)
     const randomQuestions = document.createElement('div')
-    randomQuestions.classList.add('userSelect')
+    randomQuestions.classList.add('userSelectII')
     randomQuestions.textContent = '¡Probemos preguntas al azar!'
     buttonsModeDiv.appendChild(randomQuestions)
     //CALL FUNCTION
     selectMode()
 }
 
-function selectMode () {
+function selectMode() {
     const userSelectQuestions = document.querySelector('.userSelect')
     const modesDiv = document.querySelector('.modesDiv')
     userSelectQuestions.addEventListener('click', () => {
-       box.removeChild(modesDiv)
-        optionCategories ()
+        box.removeChild(modesDiv)
+        optionCategories()
+    })
+    const randomQuestions = document.querySelector('.userSelectII')
+    randomQuestions.addEventListener('click', () => {
+        box.removeChild(modesDiv)
+        randomMode()
     })
 }
 
-
-function start() {
-    btnStart.addEventListener('click', () => {
-        const name = document.querySelector('.name').value;
-        user = name
-        box.removeChild(boxStart)
-        modes()
-    })
-}
 
 function optionCategories() {
     //Space for the categories
@@ -91,38 +96,6 @@ function optionCategories() {
 
 }
 
-function hideCategories() {
-    const three = document.querySelector('.threeCategories')
-    const two = document.querySelector('.twoCategories')
-    box.removeChild(three)
-    box.removeChild(two)
-}
-
-function hideQuestion() {
-    const divFlex = document.querySelector('.divFlex')
-    box.removeChild(divFlex)
-}
-
-function cardQuestion() {
-    const divFlex = document.createElement('div')
-    divFlex.classList.add('divFlex')
-    box.appendChild(divFlex)
-
-    const divQuestions = document.createElement('div')
-    divQuestions.classList.add('divQuestion')
-    divFlex.appendChild(divQuestions)
-
-    const difficult = document.createElement('p')
-    difficult.classList.add('difficult')
-    divQuestions.appendChild(difficult)
-
-    const questionPhrase = document.createElement('h2')
-    questionPhrase.classList.add('questionPhrase')
-    divQuestions.appendChild(questionPhrase)
-
-    randomCorrectPosition() //The function is located in script.js. The function allows put the position of the options randomly
-
-}
 
 function selectCategory() {
     const categoryMath = document.querySelector('.category')
@@ -137,7 +110,6 @@ function selectCategory() {
         cardQuestion()
         showQuestion()//The function is located in script.js
         answer()
-
     })
     categoryBio.addEventListener('click', () => {
         bio = 1
@@ -171,9 +143,48 @@ function selectCategory() {
         showQuestion()//The function is located in script.js
         answer()
     })
-
 }
 
+function randomMode() {
+    doorRandom = 1
+    defineRandomCategory()
+    defineQuestion()
+    cardQuestion()
+    showQuestion()
+    answer()
+}
 
+function hideCategories() {
+    const three = document.querySelector('.threeCategories')
+    const two = document.querySelector('.twoCategories')
+    box.removeChild(three)
+    box.removeChild(two)
+}
+
+function hideQuestion() {
+    const divFlex = document.querySelector('.divFlex')
+    box.removeChild(divFlex)
+}
+
+function cardQuestion() {
+    const divFlex = document.createElement('div')
+    divFlex.classList.add('divFlex')
+    box.appendChild(divFlex)
+
+    const divQuestions = document.createElement('div')
+    divQuestions.classList.add('divQuestion')
+    divFlex.appendChild(divQuestions)
+
+    const difficult = document.createElement('p')
+    difficult.classList.add('difficult')
+    divQuestions.appendChild(difficult)
+
+    const questionPhrase = document.createElement('h2')
+    questionPhrase.classList.add('questionPhrase')
+    divQuestions.appendChild(questionPhrase)
+
+    randomCorrectPosition() //The function is located in script.js. The function allows put the position of the options randomly
+
+}
 
 start()

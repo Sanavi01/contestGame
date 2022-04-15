@@ -1,6 +1,6 @@
 let points = 0
 
-
+let doorRandom = 0
 let doorScore = 0
 let doorQuestions = 0
 
@@ -45,7 +45,9 @@ function defineQuestion() {
             questions.incorrecta1 = 3
             questions.incorrecta2 = 2
             questions.incorrecta3 = 8
-            levelMath = levelMath + 1
+            if (doorRandom == 0) {
+                levelMath = levelMath + 1
+            }
             points = points + 1
 
         } else if (levelMath == 1) {
@@ -55,7 +57,9 @@ function defineQuestion() {
             questions.incorrecta1 = 1
             questions.incorrecta2 = 6
             questions.incorrecta3 = 4
-            levelMath = levelMath + 1
+            if (doorRandom == 0) {
+                levelMath = levelMath + 1
+            }
             points = points + 2
 
         } else if (levelMath == 2) {
@@ -65,7 +69,9 @@ function defineQuestion() {
             questions.incorrecta1 = '50 minutos'
             questions.incorrecta2 = '100 minutos'
             questions.incorrecta3 = '10 minutos'
-            levelMath = levelMath + 1
+            if (doorRandom == 0) {
+                levelMath = levelMath + 1
+            }
             points = points + 3
 
         } else if (levelMath == 3) {
@@ -75,7 +81,9 @@ function defineQuestion() {
             questions.incorrecta1 = '264.5'
             questions.incorrecta2 = '265'
             questions.incorrecta3 = '23.5'
-            levelMath = levelMath + 1
+            if (doorRandom == 0) {
+                levelMath = levelMath + 1
+            }
             points = points + 4
 
         } else if (levelMath == 4) {
@@ -85,7 +93,9 @@ function defineQuestion() {
             questions.incorrecta1 = '75 vueltas '
             questions.incorrecta2 = '25 vueltas'
             questions.incorrecta3 = '125 vueltas'
-            levelMath = levelMath + 1
+            if (doorRandom == 0) {
+                levelMath = levelMath + 1
+            }
             points = points + 5
         }
         math = 0
@@ -97,7 +107,9 @@ function defineQuestion() {
             questions.incorrecta1 = 'La célula es un tipo de Smartphone'
             questions.incorrecta2 = 'La celula es una parte de solo los humanos'
             questions.incorrecta3 = 'La celula es algo inherte'
-            levelBio = levelBio + 1
+            if (doorRandom == 0) {
+                levelBio = levelBio + 1
+            }
             points = points + 1
 
         } else if (levelBio == 1) {
@@ -107,7 +119,9 @@ function defineQuestion() {
             questions.incorrecta1 = 'Metamorfosis'
             questions.incorrecta2 = 'Mitosis'
             questions.incorrecta3 = 'Miogenesis'
-            levelBio = levelBio + 1
+            if (doorRandom == 0) {
+                levelBio = levelBio + 1
+            }
             points = points + 2
 
         } else if (levelBio == 2) {
@@ -117,7 +131,9 @@ function defineQuestion() {
             questions.incorrecta1 = 'Funcionamiento de órganos reproductores.'
             questions.incorrecta2 = 'La herencia dejada por los padres a los hijos. '
             questions.incorrecta3 = 'El proceso de pasteurizacion'
-            levelBio = levelBio + 1
+            if (doorRandom == 0) {
+                levelBio = levelBio + 1
+            }
             points = points + 3
 
         } else if (levelBio == 3) {
@@ -127,9 +143,11 @@ function defineQuestion() {
             questions.incorrecta1 = 'Su dieta es de plantas'
             questions.incorrecta2 = 'No sintetiza sus alimentos '
             questions.incorrecta3 = 'Consume alimentos elaborados'
-            levelBio = levelBio + 1
+            if (doorRandom == 0) {
+                levelBio = levelBio + 1
+            }
             points = points + 4
-            
+
         } else if (levelBio == 4) {
             questions.pregunta = 'La unidad estructural básica repetitiva de la cromatina de los cromosomas eucarióticos es:'
             questions.nivel = 'Dificultad 5'
@@ -137,10 +155,12 @@ function defineQuestion() {
             questions.incorrecta1 = 'El genoma'
             questions.incorrecta2 = 'El centrosoma'
             questions.incorrecta3 = 'El proteosoma'
-            levelBio = levelBio + 1
+            if (doorRandom == 0) {
+                levelBio = levelBio + 1
+            }
             points = points + 5
-            
-        } 
+
+        }
         bio = 0
     } else if (arts == 1) {
         if (levelArts == 0) {
@@ -150,47 +170,57 @@ function defineQuestion() {
             questions.incorrecta1 = 'Alejandro Magno'
             questions.incorrecta2 = 'Leonardo Da Vinci'
             questions.incorrecta3 = 'William Shakespeare'
-            levelArts = levelArts + 1
+            if (doorRandom == 0) {
+                levelArts = levelArts + 1
+            }
             points = points + 1
 
-        } else if (levelArts == 1){
+        } else if (levelArts == 1) {
             questions.pregunta = '¿En que premios "Oscar" Will Smith golpeo  Chris Rock?'
             questions.nivel = 'Dificultad 2'
             questions.correcta = '2022'
             questions.incorrecta1 = '2021'
             questions.incorrecta2 = '2020'
             questions.incorrecta3 = 'Nunca paso'
-            levelArts = levelArts + 1
+            if (doorRandom == 0) {
+                levelArts = levelArts + 1
+            }
             points = points + 2
 
-        } else if (levelArts == 2){
+        } else if (levelArts == 2) {
             questions.pregunta = '¿Quien escribio la Divina Comedia?'
             questions.nivel = 'Dificultad 3'
             questions.correcta = 'Dante Alighieri'
             questions.incorrecta1 = 'Nicolas Maquiavelo'
             questions.incorrecta2 = 'Miguel de Cervantes'
             questions.incorrecta3 = 'Francisco de Quevedo'
-            levelArts = levelArts + 1
+            if (doorRandom == 0) {
+                levelArts = levelArts + 1
+            }
             points = points + 3
 
-        } else if (levelArts == 3){
+        } else if (levelArts == 3) {
             questions.pregunta = '¿Quien pinto la Mona Lisa?'
             questions.nivel = 'Dificultad 4'
             questions.correcta = 'Leonardo Da Vinci'
             questions.incorrecta1 = 'Pablo Picasso'
             questions.incorrecta2 = 'Salvador Dali'
             questions.incorrecta3 = 'Vincent Van Gogh'
-            levelArts = levelArts + 1
+            if (doorRandom == 0) {
+                levelArts = levelArts + 1
+            }
             points = points + 4
 
-        } else if (levelArts == 4){
+        } else if (levelArts == 4) {
             questions.pregunta = '¿Cual fue la cancion mas importante de The Beatles?'
             questions.nivel = 'Dificultad 5'
             questions.correcta = 'Yesterday'
             questions.incorrecta1 = 'Let it Be'
             questions.incorrecta2 = 'Hey Jude'
             questions.incorrecta3 = 'Oh! Darling'
-            levelArts = levelArts + 1
+            if (doorRandom == 0) {
+                levelArts = levelArts + 1
+            }
             points = points + 5
 
         }
@@ -203,7 +233,9 @@ function defineQuestion() {
             questions.incorrecta1 = 'Francisco de Paula Santander'
             questions.incorrecta2 = 'El Rey de España'
             questions.incorrecta3 = 'Hernan Cortes'
-            levelSociales = levelSociales + 1
+            if (doorRandom == 0) {
+                levelSociales = levelSociales + 1
+            }
             points = points + 1
         } else if (levelSociales == 1) {
             questions.pregunta = '¿En qué país se inició la Revolución Industrial?'
@@ -212,7 +244,9 @@ function defineQuestion() {
             questions.incorrecta1 = 'Italia'
             questions.incorrecta2 = 'España'
             questions.incorrecta3 = 'Francia'
-            levelSociales = levelSociales + 1
+            if (doorRandom == 0) {
+                levelSociales = levelSociales + 1
+            }
             points = points + 2
 
         } else if (levelSociales == 2) {
@@ -222,9 +256,11 @@ function defineQuestion() {
             questions.incorrecta1 = 'Batalla de Austerlitz'
             questions.incorrecta2 = 'La campaña de Trafalgar.'
             questions.incorrecta3 = 'La batalla de Borodino'
-            levelSociales = levelSociales + 1
+            if (doorRandom == 0) {
+                levelSociales = levelSociales + 1
+            }
             points = points + 3
-            
+
         } else if (levelSociales == 3) {
             questions.pregunta = '¿Qué inició la Segunda Guerra Mundial?'
             questions.nivel = 'Dificultad 4'
@@ -232,9 +268,11 @@ function defineQuestion() {
             questions.incorrecta1 = 'El asesinato del archiduque Francisco Fernando.'
             questions.incorrecta2 = 'Hitler invadió Austria'
             questions.incorrecta3 = 'La caida del muro de Berlin'
-            levelSociales = levelSociales + 1
+            if (doorRandom == 0) {
+                levelSociales = levelSociales + 1
+            }
             points = points + 4
-            
+
         } else if (levelSociales == 4) {
             questions.pregunta = '¿Qué emperador romano legalizó el cristianismo y puso fin a la persecución de los cristianos?'
             questions.nivel = 'Dificultad 5'
@@ -242,9 +280,11 @@ function defineQuestion() {
             questions.incorrecta1 = 'Adriano.'
             questions.incorrecta2 = 'Trajano'
             questions.incorrecta3 = 'Neron'
-            levelSociales = levelSociales + 1
+            if (doorRandom == 0) {
+                levelSociales = levelSociales + 1
+            }
             points = points + 5
-            
+
         }
         sociales = 0
     } else if (sports == 1) {
@@ -255,7 +295,9 @@ function defineQuestion() {
             questions.incorrecta1 = 'Jugador de Basketball'
             questions.incorrecta2 = 'Nadador profesional'
             questions.incorrecta3 = 'El Ganador de el Tour de Francia'
-            levelSports = levelSports + 1
+            if (doorRandom == 0) {
+                levelSports = levelSports + 1
+            }
             points = points + 1
 
         } else if (levelSports == 1) {
@@ -265,9 +307,11 @@ function defineQuestion() {
             questions.incorrecta1 = 'Ronaldinho'
             questions.incorrecta2 = 'Zlatan Ibrahimovic'
             questions.incorrecta3 = 'Lionel Messi'
-            levelSports = levelSports + 1
+            if (doorRandom == 0) {
+                levelSports = levelSports + 1
+            }
             points = points + 2
-            
+
         } else if (levelSports == 2) {
             questions.pregunta = '¿Cuál es el significado de NBA?'
             questions.nivel = 'Dificultad 3'
@@ -275,9 +319,11 @@ function defineQuestion() {
             questions.incorrecta1 = 'Administración Nacional de Baloncesto'
             questions.incorrecta2 = 'Administración Nacional de Canasta'
             questions.incorrecta3 = 'Asociación Nacional de Canasta'
-            levelSports = levelSports + 1
+            if (doorRandom == 0) {
+                levelSports = levelSports + 1
+            }
             points = points + 3
-            
+
         } else if (levelSports == 3) {
             questions.pregunta = '¿Manny Pacquiao es un boxeador legendario de qué país?'
             questions.nivel = 'Dificultad 4'
@@ -285,9 +331,11 @@ function defineQuestion() {
             questions.incorrecta1 = 'Corea'
             questions.incorrecta2 = 'China'
             questions.incorrecta3 = 'Mexico'
-            levelSports = levelSports + 1
+            if (doorRandom == 0) {
+                levelSports = levelSports + 1
+            }
             points = points + 4
-            
+
         } else if (levelSports == 4) {
             questions.pregunta = '¿Cuáles son los cinco colores del anillo de los Juegos Olímpicos?'
             questions.nivel = 'Dificultad 5'
@@ -295,13 +343,29 @@ function defineQuestion() {
             questions.incorrecta1 = 'Azul, rojo, amarillo, verde y violeta'
             questions.incorrecta2 = 'índigo, rojo, morado, verde y negro'
             questions.incorrecta3 = 'Azul, rojo, amarillo, naranja y verde'
-            levelSports = levelSports + 1
+            if (doorRandom == 0) {
+                levelSports = levelSports + 1
+            }
             points = points + 5
-            
+
         }
         sports = 0
     }
+}
 
+function defineRandomCategory() {
+    let randomCategory = Math.floor(Math.random() * 5) + 1;
+    if (randomCategory == 1) {
+        math = 1
+    } else if (randomCategory == 2) {
+        bio = 1
+    } else if (randomCategory == 3) {
+        arts = 1
+    } else if (randomCategory == 4) {
+        sociales = 1
+    } else {
+        sports = 1
+    }
 }
 
 function showQuestion() {
@@ -322,9 +386,18 @@ function showQuestion() {
 function answer() {
     const correct = document.querySelector('.answerA')
     correct.addEventListener('click', () => {
-
         hideQuestion()
-        optionCategories()
+        if (doorRandom == 0) {
+            optionCategories()
+        } else {
+            levelMath = levelMath + 1
+            levelArts = levelArts + 1
+            levelBio = levelBio + 1
+            levelSociales = levelSociales + 1
+            levelSports = levelSports + 1 
+            randomMode()
+        }
+       
     })
     const incorrect1 = document.querySelector('.answerB')
     incorrect1.addEventListener('click', () => {
@@ -371,8 +444,6 @@ function showScore() {
         divCardScore.textContent = `${user} tu puntaje es: ${points}!`
     }
 }
-
-
 
 //LET THE PROGRAM GET A RANDOM POSITION OF THE CORRECT ANSWER
 
