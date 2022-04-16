@@ -153,6 +153,8 @@ function randomMode() {
     cardQuestion()
     showQuestion()
     answer()
+    showScore()
+    doorScore = 1
 }
 
 function hideCategories() {
