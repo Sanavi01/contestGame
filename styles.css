@@ -1,10 +1,12 @@
-html, body{
+html{
     height: 100%;
+    background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%
+);
+    margin: 0%;
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%
-);
+    
 }
 
 header{
@@ -18,8 +20,8 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center; 
-    align-content: center;
     gap: 15px;
+    
 }
 
 .welcome{
@@ -27,8 +29,9 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 400px;
-    height: auto;
+    width: auto;
+    min-width: 350px;
+    height: 150px;
     border: 2px;
     border-style: solid;
     border-color: black;
@@ -54,6 +57,11 @@ header{
    box-shadow: 0 0 20px #eee;
    border-radius: 10px;
    display: block;
+}
+
+.wrap{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .category {background-image: linear-gradient(to right, #870000 0%, #190A05  51%, #870000  100%)}
@@ -102,7 +110,8 @@ header{
 
 .divQuestion{
     width: 800px;
-    height: 400px;
+    height: auto;
+    min-height: 400px;
     background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF  51%, #ECE9E6  100%);
     padding: 20px 80px;
     border-radius: 20px;
@@ -135,7 +144,7 @@ header{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position:absolute;
+    min-width: none;
     width: 800px;
     height: 400px;
     text-align: center;

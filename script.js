@@ -427,6 +427,9 @@ function badAnswer() {
         window.location.reload()
     })
     endGame.appendChild(buttonReload)
+
+    const divQuestion = document.querySelector('.divQuestion')
+    divFlex.removeChild(divQuestion)
 }
 
 function showScore() {

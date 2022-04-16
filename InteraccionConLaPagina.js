@@ -58,12 +58,18 @@ function selectMode() {
 
 function optionCategories() {
     //Space for the categories
+   // const wrapCategories = document.createElement('div')
+   // wrapCategories.classList.add('wrap')
+   // box.appendChild(wrapCategories)
+
     const threeCategories = document.createElement('div')
     threeCategories.classList.add('threeCategories')
+    threeCategories.classList.add('wrap')
     box.appendChild(threeCategories)
 
     const twoCategories = document.createElement('div')
     twoCategories.classList.add('twoCategories')
+    twoCategories.classList.add('wrap')
     box.appendChild(twoCategories)
     //Maths
     const category = document.createElement('div')
