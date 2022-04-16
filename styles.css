@@ -139,7 +139,7 @@ header{
     border-width: 5px;
 }
 
-.endGame {
+.endGame, .winRandom {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -151,6 +151,7 @@ header{
     font-size: 30px;
     background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF  51%, #ECE9E6  100%);
     border-radius: 20px;
+    padding: 10px 30px;
 }
 
 .buttonReload {

@@ -1,4 +1,5 @@
 let points = 0
+let questionsAnswer = 0
 
 let doorRandom = 0
 let doorScore = 0
@@ -368,6 +369,24 @@ function defineRandomCategory() {
     }
 }
 
+function winRandomMode() {
+    const divFlex = document.createElement('div')
+    divFlex.classList.add('divFlex')
+    box.appendChild(divFlex)
+    const winRandom = document.createElement('div')
+    winRandom.classList.add('winRandom')
+    winRandom.textContent = `Felicidades, te has llevado 500 puntos! ¿Quieres empezar de nuevo?`
+
+    const buttonReload = document.createElement('div')
+    buttonReload.classList.add('buttonReload')
+    buttonReload.textContent = "Empecemos de Nuevo!"
+    buttonReload.addEventListener('click', () => {
+        window.location.reload()
+    })
+    winRandom.appendChild(buttonReload)
+    divFlex.appendChild(winRandom)
+}
+
 function showQuestion() {
     const difficult = document.querySelector('.difficult')
     difficult.textContent = questions.nivel
@@ -389,12 +408,16 @@ function answer() {
         hideQuestion()
         if (doorRandom == 0) {
             optionCategories()
+        } else if (questionsAnswer == 4){
+            winRandomMode()
         } else {
             levelMath = levelMath + 1
             levelArts = levelArts + 1
             levelBio = levelBio + 1
             levelSociales = levelSociales + 1
             levelSports = levelSports + 1 
+            
+            questionsAnswer = questionsAnswer + 1
             randomMode()
         }
        
