@@ -57,6 +57,7 @@ function selectMode() {
 
 
 function optionCategories() {
+    doorCategories = 1 //This is let know to the program if the categories is active
     const threeCategories = document.createElement('div')
     threeCategories.classList.add('threeCategories')
     threeCategories.classList.add('wrap')
@@ -93,6 +94,8 @@ function optionCategories() {
     twoCategories.appendChild(category5)
     selectCategory()
     showScore()
+    surrenderOption()
+    doorFinish = 1
     doorScore = 1
 
 }
@@ -154,7 +157,10 @@ function randomMode() {
     showQuestion()
     answer()
     showScore()
+    surrenderOption()
     doorScore = 1
+    doorFinish = 1
+
 }
 
 function hideCategories() {
@@ -187,7 +193,53 @@ function cardQuestion() {
     divQuestions.appendChild(questionPhrase)
 
     randomCorrectPosition() //The function is located in script.js. The function allows put the position of the options randomly
+    doorCategories = 0 //This is let know to the program if the categories is active
+}
 
+function surrenderOption() {
+    if (doorFinish == 0) {
+        const buttonFinish = document.createElement('div')
+        const divFinish = document.createElement('div')
+        divFinish.classList.add('divFinish')
+        buttonFinish.classList.add('btnFinish')
+        divFinish.appendChild(buttonFinish)
+        if (doorRandom == 0) {
+            buttonFinish.textContent = `No me quiero arriesgar, me llevo ${points} puntos`
+            box.appendChild(divFinish)
+        } else if (doorRandom == 1) {
+            buttonFinish.textContent = `No me quiero arriesgar, me llevo ${pointsRandom} puntos`
+            box.appendChild(divFinish)
+        }
+    } else if (doorFinish == 1) {
+        const buttonFinish = document.querySelector('.btnFinish')
+        const divFinish = document.querySelector('.divFinish')
+
+        if (doorRandom == 0) {
+            buttonFinish.textContent = `No me quiero arriesgar, me llevo ${points} puntos`
+            box.appendChild(divFinish)
+        } else if (doorRandom == 1) {
+            buttonFinish.textContent = `No me quiero arriesgar, me llevo ${pointsRandom} puntos`
+            box.appendChild(divFinish)
+        }
+    }
+    if (activeBtn == 0) {
+        finishGame()
+        activeBtn = 1
+    } else if (activeBtn == 1) {
+        return
+    }
+}
+
+function finishGame() {
+    const buttonFinish = document.querySelector('.btnFinish')
+    buttonFinish.addEventListener('click', () => {
+        if (doorCategories == 1){
+            hideCategories()
+        } else{
+            hideQuestion()
+        }
+        winRandomMode()
+    })
 }
 
 start()

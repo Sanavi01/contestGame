@@ -2,9 +2,12 @@ let points = 0
 let pointsRandom = 0
 let questionsAnswered = 0
 
+let activeBtn = 0
+let doorFinish = 0
 let doorRandom = 0
 let doorScore = 0
 let doorQuestions = 0
+let doorCategories = 0 //This is let know to the program if the categories is active
 
 //math. bio, arts... = 0 is a close door
 //math. bio, arts... = 1 is a open door    
