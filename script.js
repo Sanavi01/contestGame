@@ -53,7 +53,6 @@ function defineQuestion() {
             if (doorRandom == 0) {
                 levelMath = levelMath + 1
             }
-            points = points + 100
 
         } else if (levelMath == 1) {
             questions.pregunta = '¿Si a: 2 , b: 3 , cuanto es c, si c : (a * b) + 2?'
@@ -65,7 +64,6 @@ function defineQuestion() {
             if (doorRandom == 0) {
                 levelMath = levelMath + 1
             }
-            points = points + 200
 
         } else if (levelMath == 2) {
             questions.pregunta = 'Si 5 máquinas hacen 5 artículos en 5 minutos. ¿Cuánto tiempo necesitarán 100 máquinas para hacer 100 artículos?'
@@ -77,7 +75,6 @@ function defineQuestion() {
             if (doorRandom == 0) {
                 levelMath = levelMath + 1
             }
-            points = points + 300
 
         } else if (levelMath == 3) {
             questions.pregunta = '¿Cual es la raiz cuadrada de 529?'
@@ -89,7 +86,6 @@ function defineQuestion() {
             if (doorRandom == 0) {
                 levelMath = levelMath + 1
             }
-            points = points + 400
 
         } else if (levelMath == 4) {
             questions.pregunta = 'Dos ruedas están unidas por una correa de transmisión. La primera tiene un radio de 25 cm y la segunda de 75 cm. Cuando la primera ha dado 300 vueltas. ¿Cuántas vueltas dará la segunda?'
@@ -101,7 +97,6 @@ function defineQuestion() {
             if (doorRandom == 0) {
                 levelMath = levelMath + 1
             }
-            points = points + 500
         }
         math = 0
     } else if (bio == 1) {
@@ -115,7 +110,6 @@ function defineQuestion() {
             if (doorRandom == 0) {
                 levelBio = levelBio + 1
             }
-            points = points + 100
 
         } else if (levelBio == 1) {
             questions.pregunta = 'Las células reproductoras se dividen por...'
@@ -127,7 +121,6 @@ function defineQuestion() {
             if (doorRandom == 0) {
                 levelBio = levelBio + 1
             }
-            points = points + 200
 
         } else if (levelBio == 2) {
             questions.pregunta = '¿Qué explica Mendel con sus leyes?'
@@ -139,7 +132,6 @@ function defineQuestion() {
             if (doorRandom == 0) {
                 levelBio = levelBio + 1
             }
-            points = points + 300
 
         } else if (levelBio == 3) {
             questions.pregunta = 'Los organismos autótrofos tienen como característica:'
@@ -151,7 +143,6 @@ function defineQuestion() {
             if (doorRandom == 0) {
                 levelBio = levelBio + 1
             }
-            points = points + 400
 
         } else if (levelBio == 4) {
             questions.pregunta = 'La unidad estructural básica repetitiva de la cromatina de los cromosomas eucarióticos es:'
@@ -163,7 +154,6 @@ function defineQuestion() {
             if (doorRandom == 0) {
                 levelBio = levelBio + 1
             }
-            points = points + 500
 
         }
         bio = 0
@@ -178,7 +168,6 @@ function defineQuestion() {
             if (doorRandom == 0) {
                 levelArts = levelArts + 1
             }
-            points = points + 100
 
         } else if (levelArts == 1) {
             questions.pregunta = '¿En que premios "Oscar" Will Smith golpeo  Chris Rock?'
@@ -190,7 +179,6 @@ function defineQuestion() {
             if (doorRandom == 0) {
                 levelArts = levelArts + 1
             }
-            points = points + 200
 
         } else if (levelArts == 2) {
             questions.pregunta = '¿Quien escribio la Divina Comedia?'
@@ -202,7 +190,6 @@ function defineQuestion() {
             if (doorRandom == 0) {
                 levelArts = levelArts + 1
             }
-            points = points + 300
 
         } else if (levelArts == 3) {
             questions.pregunta = '¿Quien pinto la Mona Lisa?'
@@ -214,7 +201,6 @@ function defineQuestion() {
             if (doorRandom == 0) {
                 levelArts = levelArts + 1
             }
-            points = points + 400
 
         } else if (levelArts == 4) {
             questions.pregunta = '¿Cual fue la cancion mas importante de The Beatles?'
@@ -226,8 +212,6 @@ function defineQuestion() {
             if (doorRandom == 0) {
                 levelArts = levelArts + 1
             }
-            points = points + 500
-
         }
         arts = 0
     } else if (sociales == 1) {
@@ -241,7 +225,6 @@ function defineQuestion() {
             if (doorRandom == 0) {
                 levelSociales = levelSociales + 1
             }
-            points = points + 100
         } else if (levelSociales == 1) {
             questions.pregunta = '¿En qué país se inició la Revolución Industrial?'
             questions.nivel = 'Dificultad 2'
@@ -252,7 +235,6 @@ function defineQuestion() {
             if (doorRandom == 0) {
                 levelSociales = levelSociales + 1
             }
-            points = points + 200
 
         } else if (levelSociales == 2) {
             questions.pregunta = '¿Qué famosa batalla perdió y dejó humillado a Napoleón Bonaparte?'
@@ -264,7 +246,6 @@ function defineQuestion() {
             if (doorRandom == 0) {
                 levelSociales = levelSociales + 1
             }
-            points = points + 300
 
         } else if (levelSociales == 3) {
             questions.pregunta = '¿Qué inició la Segunda Guerra Mundial?'
@@ -276,7 +257,6 @@ function defineQuestion() {
             if (doorRandom == 0) {
                 levelSociales = levelSociales + 1
             }
-            points = points + 400
 
         } else if (levelSociales == 4) {
             questions.pregunta = '¿Qué emperador romano legalizó el cristianismo y puso fin a la persecución de los cristianos?'
@@ -288,8 +268,6 @@ function defineQuestion() {
             if (doorRandom == 0) {
                 levelSociales = levelSociales + 1
             }
-            points = points + 500
-
         }
         sociales = 0
     } else if (sports == 1) {
@@ -303,7 +281,6 @@ function defineQuestion() {
             if (doorRandom == 0) {
                 levelSports = levelSports + 1
             }
-            points = points + 100
 
         } else if (levelSports == 1) {
             questions.pregunta = '¿Quién tiene más goles en el fútbol?'
@@ -315,7 +292,6 @@ function defineQuestion() {
             if (doorRandom == 0) {
                 levelSports = levelSports + 1
             }
-            points = points + 200
 
         } else if (levelSports == 2) {
             questions.pregunta = '¿Cuál es el significado de NBA?'
@@ -327,7 +303,6 @@ function defineQuestion() {
             if (doorRandom == 0) {
                 levelSports = levelSports + 1
             }
-            points = points + 300
 
         } else if (levelSports == 3) {
             questions.pregunta = '¿Manny Pacquiao es un boxeador legendario de qué país?'
@@ -339,7 +314,6 @@ function defineQuestion() {
             if (doorRandom == 0) {
                 levelSports = levelSports + 1
             }
-            points = points + 400
 
         } else if (levelSports == 4) {
             questions.pregunta = '¿Cuáles son los cinco colores del anillo de los Juegos Olímpicos?'
@@ -351,8 +325,7 @@ function defineQuestion() {
             if (doorRandom == 0) {
                 levelSports = levelSports + 1
             }
-            points = points + 500
-
+            
         }
         sports = 0
     }
@@ -414,6 +387,7 @@ function answer() {
     correct.addEventListener('click', () => {
         hideQuestion()
         if (doorRandom == 0) {
+            pointsCategoriesMode()
             optionCategories()
         } else if (doorRandom == 1) {
             levelMath = levelMath + 1
@@ -445,6 +419,20 @@ function answer() {
     })
 }
 
+function pointsCategoriesMode() {
+    if (questions.nivel == 'Dificultad 1') {
+        points = points + 100
+    } else if (questions.nivel == 'Dificultad 2') {
+        points = points + 200
+    } else if (questions.nivel == 'Dificultad 3') {
+        points = points + 300
+    } else if (questions.nivel == 'Dificultad 4') {
+        points = points + 400
+    } else {
+        points = points + 500
+    }
+    console.log(points)
+}
 function badAnswer() {
     const divFlex = document.querySelector('.divFlex')
     const endGame = document.createElement('div')
